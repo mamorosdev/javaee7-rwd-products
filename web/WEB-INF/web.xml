@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	 version="3.1">
+    <display-name>ProvenAllergogensDemo</display-name>
+    <!-- Por si quieres editar el nombre de la JSP snicial. -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    <!-- Per a iniciar la webapp con un servlet en vez de una jsp se hace así -->
+<!--    <servlet>
+        <servlet-name>Productes</servlet-name>
+        <servlet-class>controller.ProductesController</servlet-class>
+        <init-param>
+		<param-name>action</param-name>
+		<param-value>ListAll</param-value>
+	</init-param>
+        <load-on-startup>0</load-on-startup>
+    </servlet>-->
+    
+<!-- Esto no hace falta porque ya lo hemos definido por anotaciones @    
+    <servlet-mapping>
+        <servlet-name>BeginnersBook</servlet-name>
+        <url-pattern>/details</url-pattern>
+    </servlet-mapping>-->
+    
+    <!-- Minutos que durará la sesión -->
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
